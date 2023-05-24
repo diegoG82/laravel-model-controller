@@ -1,5 +1,15 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-img{
-   height: 150px;
+body {
+    background-color: black;
+}
+
+.card {
+    font-size: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cornflowerblue;
+    height: 500px;
+    img {
+        height: 300px;
+    }
 }

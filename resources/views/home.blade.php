@@ -17,7 +17,7 @@
 
 
 <body>
-    @foreach ($movies as $movie)
+    {{-- @foreach ($movies as $movie)
         <ul>
             <li>{{ $movie->title }}</li>
             <li>{{$movie->original_title}}</li>
@@ -29,7 +29,33 @@
            
             
         </ul>
-    @endforeach
+    @endforeach --}}
+
+
+    <div class="container">
+        <div class="row row-cols-5">
+            @foreach ($movies as $movie)
+                <div class="col mb-1 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ $movie->image }}" alt="{{ $movie->title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $movie->title }}</h5>
+                            <p class="card-text">Og Title: {{ $movie->original_title }}</p>
+                            <p class="card-text">Nationality: {{ $movie->nationality }}</p>
+                            <p class="card-text">Release Date: {{ $movie->date }}</p>
+                            <p class="card-text">Vote: {{ $movie->vote }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+
+
+
+
+
 </body>
 
 </html>
